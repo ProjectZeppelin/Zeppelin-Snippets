@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //                              0             1       2                     3               4                         5                      6   
+    // https://aplearning.xyz/projectzeppelin/snippets/F0xedb/56c7f68b5de9d7916e03b91dbe37c745/raw/1e120d21cb51d2b5709fb94992b337abc4b4b52f/variables.js
+    let pathArray = window.location.pathname.split('/');
+    if (pathArray[4] == "raw") { /* Do stuff */ }
+    let gistPathArray = pathArray.splice(2);
+    let gistPath = "https://gist.githubusercontent.com";
+    logo.svg.forEach(element => {
+      gistPath += "/" + element;
+    });
+    fetch(gistPath).then(res => {
+      console.log(res);
+    });
+  </script>
+</body>
+</html>
