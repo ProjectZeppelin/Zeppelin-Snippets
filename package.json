@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "parcel build index.html --public-url '.'"
+    "build": "parcel build index.html --public-url '.'; cp .htaccess dist/.htaccess"
   },
   "devDependencies": {
     "cssnano": "^4.1.8",
