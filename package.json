@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "parcel build index.html --public-url '.'"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.8",
+    "sass": "^1.15.3",
+    "parceljs": ""
+  }
+}

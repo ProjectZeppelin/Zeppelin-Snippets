@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Project Zeppelin | Snippets</title>
+  <link rel="stylesheet" href="scss/style.scss">
 </head>
+
 <body>
+  <pre><code class="language-js" id="code"></code></pre>
+  <script src="js/prism.js"></script>
   <script>
-    //                              0             1       2                     3               4                         5                      6   
-    // https://aplearning.xyz/projectzeppelin/snippets/F0xedb/56c7f68b5de9d7916e03b91dbe37c745/raw/1e120d21cb51d2b5709fb94992b337abc4b4b52f/variables.js
-    let pathArray = window.location.pathname.split('/');
-    if (pathArray[4] == "raw") { /* Do stuff */ }
-    let gistPathArray = pathArray.splice(2);
-    let gistPath = "https://gist.githubusercontent.com";
-    logo.svg.forEach(element => {
-      gistPath += "/" + element;
-    });
-    fetch(gistPath).then(res => {
-      console.log(res);
-    });
+    // Get Request Parameters
+    let pathArray = window.location.search.split('/');
+    // Quick check if request is valid
+    if (pathArray[2] == "raw") {
+      // Set Base Path
+      let gistPath = "https://gist.githubusercontent.com";
+      // Remove ?
+      while (pathArray[0].charAt(0) === '?') {
+        pathArray[0] = pathArray[0].substr(1);
+      }
+      // Create request link
+      pathArray.forEach(element => {
+        gistPath += "/" + element;
+      });
+      // Do request
+      fetch(gistPath).then(res => res.text()).then(text => {
+        document.getElementById('code').innerHTML = text;
+        setTimeout(() => {
+          Prism.highlightAll();
+        }, 10);
+      });
+    }
   </script>
+
 </body>
+
 </html>
