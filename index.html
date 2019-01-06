@@ -28,12 +28,16 @@
         gistPath += "/" + element;
       });
       // Do request
-      fetch(gistPath).then(res => res.text()).then(text => {
+      fetch(gistPath).then(res => res.status == 200 ? res.text() : null).then(text => {
         document.getElementById('code').classList.add('language-' + pathArray[4].split('.')[1]);
-        document.getElementById('code').innerHTML = text;
-        setTimeout(() => {
-          Prism.highlightAll();
-        }, 10);
+        if (text) {
+          document.getElementById('code').innerHTML = text;
+          setTimeout(() => {
+            Prism.highlightAll();
+          }, 10);
+        } else {
+          document.getElementById('code').innerHTML = 'Data failed to load...';
+        }
       });
     }
   </script>
