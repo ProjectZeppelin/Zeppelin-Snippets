@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <pre><code class="language-js" id="code"></code></pre>
+  <pre><code id="code"></code></pre>
   <script src="js/prism.js"></script>
   <script>
     // Get Request Parameters
@@ -29,6 +29,7 @@
       });
       // Do request
       fetch(gistPath).then(res => res.text()).then(text => {
+        document.getElementById('code').classList.add('language-' + pathArray[4].split('.')[1]);
         document.getElementById('code').innerHTML = text;
         setTimeout(() => {
           Prism.highlightAll();
