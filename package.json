@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "build": "parcel build scss/style.scss; cp .htaccess dist/.htaccess; cp index.php dist/index.php;",
-    "build_old": "parcel build index.php --public-url '.'; cp .htaccess dist/.htaccess"
+    "build": "sass scss/style.scss:css/style.css --style=compressed"
   },
   "devDependencies": {
     "cssnano": "^4.1.8",
