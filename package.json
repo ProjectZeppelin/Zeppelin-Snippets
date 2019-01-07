@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "build": "parcel build index.html --public-url '.'; cp .htaccess dist/.htaccess"
+    "build": "parcel build scss/style.scss; cp .htaccess dist/.htaccess; cp index.php dist/index.php;",
+    "build_old": "parcel build index.php --public-url '.'; cp .htaccess dist/.htaccess"
   },
   "devDependencies": {
     "cssnano": "^4.1.8",
-    "sass": "^1.15.3",
-    "parceljs": ""
+    "parceljs": "",
+    "sass": "^1.15.3"
   }
 }
