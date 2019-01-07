@@ -1,6 +1,6 @@
 <?php
     ini_set("auto_detect_line_endings", true);
-    $url = "https://gist.githubusercontent.com/" . $_GET["snippet"];
+    $url = "https://gist.githubusercontent.com/" . str_replace(' ', '%20', $_GET["snippet"]);
     $data = file_get_contents($url);
     $type = getLangShort(end(explode(".", $url)));
     function getLangShort($short) {
