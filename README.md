@@ -3,7 +3,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![Stage](https://img.shields.io/badge/Stage-Stable-green.svg)
 ![Version](https://img.shields.io/badge/Version-1.0-green.svg)
-![NPM](https://img.shields.io/badge/NPM-green.svg)
+![NPM](https://img.shields.io/badge/Requires-NPM-green.svg)
 # Zeppelin Snippets
 Server code to server code snippets for the android app
 
