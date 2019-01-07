@@ -24,7 +24,9 @@ npm run build
 ```
 
 ## Usage
-`http://index.php?snippet=<PATH_TO_CODE_FILE>`
+```http
+http://index.php?snippet=<PATH_TO_CODE_FILE>
+```
 
 ## Requirements
 
