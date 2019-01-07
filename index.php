@@ -41,9 +41,7 @@
   <pre><code class="language-<?php echo $type; ?>" id="code"><?php echo $data; ?></code></pre>
   <script src="prism.js"></script>
   <script>
-    setTimeout(() => {
-      Prism.highlightAll();
-    }, 10);
+    Prism.highlightAll();
   </script>
 
 </body>
