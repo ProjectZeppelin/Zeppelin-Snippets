@@ -13,6 +13,16 @@
   <pre><code id="code"></code></pre>
   <script src="js/prism.js"></script>
   <script>
+    function getLangShort(short) {
+      switch (short) {
+        case 'cs':
+            return 'csharp'
+          break;
+        default:
+            return short;
+          break;
+      }
+    }
     // Get Request Parameters
     let pathArray = window.location.search.split('/');
     // Quick check if request is valid
@@ -29,14 +39,14 @@
       });
       // Do request
       fetch(gistPath).then(res => res.status == 200 ? res.text() : null).then(text => {
-        document.getElementById('code').classList.add('language-' + pathArray[4].split('.')[1]);
+        document.getElementById('code').classList.add('language-' + getLangShort(pathArray[4].split('.')[1]));
         if (text) {
-          document.getElementById('code').innerHTML = text;
+          document.getElementById('code').innerText = text;
           setTimeout(() => {
             Prism.highlightAll();
           }, 10);
         } else {
-          document.getElementById('code').innerHTML = 'Data failed to load...';
+          document.getElementById('code').innerText = 'Data failed to load...';
         }
       });
     }
