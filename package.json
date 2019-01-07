@@ -1,10 +1,9 @@
 {
   "scripts": {
-    "build": "parcel build index.html --public-url '.'; cp .htaccess dist/.htaccess"
+    "build": "sass scss/style.scss:css/style.css --style=compressed"
   },
   "devDependencies": {
     "cssnano": "^4.1.8",
-    "sass": "^1.15.3",
-    "parceljs": ""
+    "sass": "^1.15.3"
   }
 }
