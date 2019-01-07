@@ -12,12 +12,12 @@ Server code to server code snippets for the android app
 
 ## Quick start
 
-Clone and run the
-[MattZK/ProjectZeppelin](https://github.com/MattZK/ProjectZeppelin.git)
+Clone and build the
+[ProjectZeppelin/Zeppelin-Snippets](https://github.com/ProjectZeppelin/Zeppelin-Snippets.git)
 repository:
 
 ```sh
-git clone https://github.com/MattZK/Zeppelin-Snippets.git
+git clone https://github.com/ProjectZeppelin/Zeppelin-Snippets.git
 cd Zeppelin-Snippets
 npm install
 npm run build
